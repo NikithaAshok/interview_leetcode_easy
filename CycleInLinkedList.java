@@ -20,8 +20,21 @@ public class CycleInLinkedList {
 		return false;*/
 		
 		//Floyd's cycle detection to find loop in singly linked list
-		return true;
-		
+		 if(head==null) return false;
+	        LiNode slow = head;
+	        LiNode fast = head.next;
+
+	        while(slow!=fast){
+
+	            if(fast == null || fast.next == null){
+	                return false;
+	            }
+	            
+	            slow = slow.next;
+	            fast = fast.next.next;
+
+	        }
+	        return true;
 	}
 
 	public static void main(String[] args) {

@@ -8,14 +8,14 @@ public class FizzBuzz {
 		List<String> result = new ArrayList<String>();
 		int i;
 		for(i=1;i<=n;i++) {
-			if(i%3==0) {
-				result.add(i,"Fizz");
+			if(i%3==0 && i%5==0) {
+				result.add(i,"FizzBuzz");
 			}
 			else if(i%5==0) {
 				result.add(i, "Buzz");
 			}
-			else if(i%15==0) {
-				result.add(i, "FizzBuzz");
+			else if(i%3==0) {
+				result.add(i, "Buzz");
 			} 
 			else {
 				result.add(i, Integer.toString(i));
